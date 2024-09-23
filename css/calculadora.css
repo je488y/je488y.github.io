@@ -1,0 +1,78 @@
+body {
+    background-color: #ff8000; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif; 
+    transition: background-color 0.3s;
+}
+
+.vertical-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100px; 
+    position: fixed; /* Fija la barra de navegación en su lugar */
+    left: 0; /* Posiciona la barra a la izquierda */
+    top: 0;
+    bottom: 0;
+    background-color: #2a971b; /* Color de fondo de la barra */
+    padding-top: 20px; 
+}
+
+.vertical-navbar .navbar-brand {
+    text-align: center; /* Centra la marca */
+    margin-bottom: 20px; /* Espacio debajo de la marca */
+    font-size: 1.2rem; 
+}
+
+.vertical-navbar .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem; 
+}
+
+.vertical-navbar .nav-link {
+    padding: 10px 15px; /* Espacio alrededor del texto del enlace */
+    color: #ffffff; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    font-size: 0.9rem; /* Tamaño de fuente del enlace (ajustar según sea necesario) */
+}
+
+.vertical-navbar .nav-link:hover {
+    background-color: #4b5749; /* Color de fondo al pasar el ratón */
+    color: #ffffff; /* Color del texto al pasar el ratón */
+}
+
+.navbar-toggler {
+    display: none; /* Oculta el botón de alternar para la versión móvil */
+}
+
+.invoice-card {
+    display: none;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para pantallas más pequeñas */
+@media (max-width: 650px) {
+    body {
+        background-color: black; /* Color de fondo para pantallas pequeñas */
+    }
+}
+
+/* Estilo para pantallas más grandes */
+@media (min-width: 769px) {
+    body {
+        background-color: orangered; /* Color de fondo para pantallas grandes */
+    }
+}

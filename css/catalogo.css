@@ -1,0 +1,158 @@
+body {
+    background-color: #ff8000; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif; 
+}
+
+.vertical-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100px; 
+    position: fixed; 
+    left: 0; 
+    top: 0;
+    bottom: 0;
+    background-color: #2a971b; 
+    padding-top: 20px; 
+}
+
+.vertical-navbar .navbar-brand {
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 1.2rem; 
+}
+
+.vertical-navbar .navbar-nav {
+    display: flex;
+    flex-direction: column; 
+}
+
+.vertical-navbar .nav-link {
+    padding: 10px 15px; 
+    color: #ffffff; 
+    text-align: center; 
+    font-size: 0.9rem; 
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.vertical-navbar .nav-link:hover {
+    background-color: #4b5749; 
+    color: #ffffff; 
+}
+
+.navbar-toggler {
+    display: none; 
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem; 
+}
+
+.alert {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+}
+
+.cart-summary {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Transición para el carrito */
+}
+
+.card {
+    transition: transform 0.3s; /* Transición al escalar */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumentar el tamaño al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    .vertical-navbar {
+        width: 200px; 
+    }
+    
+    .navbar-collapse {
+        flex-direction: row; 
+        justify-content: center; 
+    }
+
+    .cart-summary {
+        width: 90%; 
+        right: 5%; 
+        transform: translateY(0); /* Asegurar que no se desplace */
+    }
+
+    .card {
+        transform: scale(0.95); /* Reducir el tamaño de las tarjetas en móviles */
+        transition: transform 0.3s; /* Transición suave */
+    }
+
+    .card:hover {
+        transform: scale(1.05); /* Aumentar el tamaño al pasar el mouse */
+    }
+}
+
+.card {
+    transition: transform 0.3s; /* Transición para escalado */
+    overflow: hidden; /* Para evitar que el contenido se desborde al girar */
+}
+
+.card img {
+    transition: transform 0.3s; /* Transición para la imagen */
+}
+
+.card:hover img {
+    animation: rotate 0.6s ease forwards; /* Llama a la animación al hacer hover */
+}
+
+/* Definición de la animación */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg); /* Comienza en posición normal */
+    }
+    50% {
+        transform: rotate(360deg); /* Gira 360 grados */
+    }
+    100% {
+        transform: rotate(0deg); /* Vuelve a la posición normal */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        transform: scale(0.95); /* Reducir el tamaño de las tarjetas en móviles */
+        transition: transform 0.3s; /* Transición suave */
+    }
+
+    .card:hover {
+        transform: scale(1.05); /* Aumentar el tamaño al pasar el mouse */
+    }
+
+    .card:hover img {
+        animation: rotate 0.6s ease forwards; /* Animación para imágenes en móviles */
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: black; /* Color de fondo para pantallas pequeñas */
+    }
+}
+
+/* Estilo para pantallas más grandes */
+@media (min-width: 769px) {
+    body {
+        background-color: orangered; /* Color de fondo para pantallas grandes */
+    }
+}

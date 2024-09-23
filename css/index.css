@@ -1,0 +1,123 @@
+/* Estilos generales del cuerpo */
+body {
+    background-color: #ff8000; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif; 
+}
+
+/* Estilos para la barra de navegación vertical */
+.vertical-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    position: fixed; 
+    left: 0; 
+    top: 0;
+    bottom: 0;
+    background-color: #2a971b; 
+    padding-top: 20px; 
+}
+
+.vertical-navbar .navbar-brand {
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 1.2rem; 
+}
+
+.vertical-navbar .navbar-nav {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Centra los enlaces horizontalmente */
+}
+
+.vertical-navbar .nav-link {
+    padding: 10px 15px; /* Espaciado en los enlaces */
+    width: 100%; /* Hace que el enlace ocupe el 100% del ancho */
+    text-align: center; /* Centra el texto dentro del enlace */
+    color: #ffffff; /* Color del texto */
+}
+
+.vertical-navbar .nav-link:hover {
+    background-color: #4b5749; /* Color al pasar el mouse */
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    position: relative;
+    width: calc(100% - 120px); /* Ajusta el ancho para dejar espacio para la barra de navegación */
+    margin-left: 120px; /* Alinea el carrusel a la derecha de la barra de navegación */
+    margin-top: 20px; /* Espacio superior para que no quede pegado al texto */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem; 
+}
+
+/* Estilos para el contenedor de bienvenida */
+.welcome-container {
+    text-align: center;
+    margin-top: 20px; /* Espacio superior para que no quede pegado al borde */
+}
+
+.welcome-container h1, .welcome-container p {
+    font-size: 2rem; /* Tamaño grande para el título */
+}
+
+.welcome-container p {
+    font-size: 1.25rem; /* Tamaño ligeramente más pequeño para el párrafo */
+}
+
+/* Animación para mostrar/ocultar */
+.fade-in-out {
+    animation: fadeInOut 10s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.carousel-item {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Desvanecimiento suave */
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+/* Ajuste para el contenedor del carrusel */
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: black; /* Color de fondo para pantallas pequeñas */
+    }
+}
+
+/* Estilo para pantallas más grandes */
+@media (min-width: 769px) {
+    body {
+        background-color: orangered; /* Color de fondo para pantallas grandes */
+    }
+}

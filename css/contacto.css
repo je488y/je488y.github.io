@@ -1,0 +1,113 @@
+body {
+    background-color: #ff8000;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    height: 100vh; /* Hace que el cuerpo ocupe toda la altura de la ventana */
+}
+
+.vertical-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #2a971b;
+    padding-top: 20px;
+}
+
+.vertical-navbar .navbar-brand {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.vertical-navbar .navbar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-navbar .nav-link {
+    padding: 10px 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.vertical-navbar .nav-link:hover {
+    background-color: #4b5749;
+    color: #ffffff;
+}
+
+.anime-figure-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.anime-figure {
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .vertical-navbar {
+        position: static; /* Cambia a posición estática en pantallas pequeñas */
+        flex-direction: row; /* Cambia a dirección horizontal */
+        justify-content: space-around; /* Distribuye los elementos */
+    }
+
+    .navbar-nav {
+        flex-direction: row; /* Alinea los elementos horizontalmente */
+    }
+
+    .nav-link {
+        padding: 5px 10px; /* Ajusta el padding para enlaces en pantallas pequeñas */
+        font-size: 0.8rem; /* Ajusta el tamaño de fuente */
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: black; /* Color de fondo para pantallas pequeñas */
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        background-color: orangered; /* Color de fondo para pantallas grandes */
+    }
+}
+
+#contenedorImagen {
+    margin: 20px 0; /* Espacio entre el SVG y el botón */
+}
+
+button {
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}

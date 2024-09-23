@@ -1,0 +1,134 @@
+
+
+
+/* General Styles */
+body {
+    background-color: #ff8000; /* Fondo de la página */
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif; /* Aplica la tipografía */
+}
+
+/* Navbar Styles */
+.vertical-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100px; /* Ajusta el ancho según sea necesario */
+    position: fixed; /* Fija la barra de navegación en su lugar */
+    left: 0; /* Posiciona la barra a la izquierda */
+    top: 0;
+    bottom: 0;
+    background-color: #2a971b; /* Color de fondo de la barra */
+    padding-top: 20px; /* Espacio en la parte superior */
+}
+
+.vertical-navbar .navbar-brand {
+    text-align: center; /* Centra la marca */
+    margin-bottom: 20px; /* Espacio debajo de la marca */
+    font-size: 1.2rem; /* Tamaño de fuente de la marca (ajustar según sea necesario) */
+}
+
+.vertical-navbar .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+}
+
+.vertical-navbar .nav-link {
+    padding: 10px 15px; /* Espacio alrededor del texto del enlace */
+    color: #ffffff; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    font-size: 0.9rem; /* Tamaño de fuente del enlace (ajustar según sea necesario) */
+}
+
+.vertical-navbar .nav-link:hover {
+    background-color: #4b5749; /* Color de fondo al pasar el ratón */
+    color: #ffffff; /* Color del texto al pasar el ratón */
+}
+
+.navbar-toggler {
+    display: none; /* Oculta el botón de alternar para la versión móvil */
+}
+/* Asegúrate de que los botones se vean bien */
+.btn-primary {
+    background-color: #007bff; /* Color de fondo del botón */
+    border-color: #007bff; /* Color del borde del botón */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem; 
+}
+
+/* Alert Styles */
+.alert {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+}
+
+/* Cart Summary Styles */
+.cart-summary {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de movimiento en las tarjetas */
+.card {
+    transition: transform 0.3s; /* Transición suave para el movimiento */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Mueve la tarjeta hacia arriba al pasar el mouse */
+}
+
+/* Media Queries para ajustar el diseño en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .vertical-navbar {
+        width: 80px; /* Reduce el ancho de la barra de navegación en pantallas más pequeñas */
+    }
+
+    .vertical-navbar .navbar-brand {
+        font-size: 1rem; /* Ajusta el tamaño de la fuente de la marca */
+    }
+
+    .vertical-navbar .nav-link {
+        font-size: 0.8rem; /* Ajusta el tamaño de la fuente del enlace */
+    }
+
+    .cart-summary {
+        width: 100%; /* Asegura que el resumen del carrito ocupe todo el ancho */
+    }
+}
+
+@media (max-width: 576px) {
+    .vertical-navbar {
+        width: 60px; /* Reduce aún más el ancho en pantallas muy pequeñas */
+    }
+
+    .vertical-navbar .navbar-brand {
+        font-size: 0.8rem; /* Ajusta el tamaño de la fuente de la marca */
+    }
+
+    .vertical-navbar .nav-link {
+        font-size: 0.7rem; /* Ajusta el tamaño de la fuente del enlace */
+    }
+}
+@media (max-width: 650px) {
+    body {
+        background-color: black; /* Color de fondo para pantallas pequeñas */
+    }
+}
+
+/* Estilo para pantallas más grandes */
+@media (min-width: 769px) {
+    body {
+        background-color: orangered; /* Color de fondo para pantallas grandes */
+    }
+}

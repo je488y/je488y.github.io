@@ -1,0 +1,63 @@
+body {
+    background-color: #ff8000; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif; /* Aplica la tipografía */
+}
+.vertical-navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100px; 
+    position: fixed; 
+    left: 0; 
+    top: 0;
+    bottom: 0;
+    background-color: #2a971b;
+    padding-top: 20px; 
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem; 
+}
+
+.vertical-navbar .navbar-brand {
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 1.2rem; 
+}
+
+.vertical-navbar .navbar-nav {
+    display: flex;
+    flex-direction: column; 
+}
+
+
+.vertical-navbar .nav-link {
+    padding: 10px 15px; 
+    color: #ffffff; 
+    text-align: center; 
+    font-size: 0.9rem; 
+}
+
+.vertical-navbar .nav-link:hover {
+    background-color: #1da805; /* Color de fondo al pasar el ratón */
+    color: #ffffff; 
+}
+
+.navbar-toggler {
+    display: none; 
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: black; /* Color de fondo para pantallas pequeñas */
+    }
+}
+
+/* Estilo para pantallas más grandes */
+@media (min-width: 769px) {
+    body {
+        background-color: orangered; /* Color de fondo para pantallas grandes */
+    }
+}

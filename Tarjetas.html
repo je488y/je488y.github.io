@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Nueva carpeta/css/tarjetas.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark vertical-navbar">
+        <a class="navbar-brand" href="#">Menu</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="Index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="Catalogo.html">Figuras</a></li>
+                <li class="nav-item"><a class="nav-link" href="Tarjetas.html">Tarjetas</a></li>
+                <li class="nav-item"><a class="nav-link" href="Calculadora.html">Calculadora</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Atendimiento</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <h2>Tarjetas</h2>
+        <div class="row">
+            <!-- Cada figura -->
+            <div class="col-md-4 mb-4" data-price="40000" data-title="Tarjeta1">
+                <div class="card">
+                    <img src="Nueva carpeta/img/Tarjeta1.JPG" class="card-img-top" alt="Figura de Krilin">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta Sorpresa, con jacos, cartas y ruleta</h5>
+                        <p class="card-text">40000 pesos.</p>
+                        <a href="#" class="btn btn-primary add-to-cart">Añadir al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-price="40000" data-title="Tarjeta2">
+                <div class="card">
+                    <img src="Nueva carpeta/img/Tarjeta2.JPG" class="card-img-top" alt="Figura de Krilin">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta Sorpresa, con jacos, cartas y ruleta</h5>
+                        <p class="card-text">40000 pesos.</p>
+                        <a href="#" class="btn btn-primary add-to-cart">Añadir al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-price="40000" data-title="Tarjeta3">
+                <div class="card">
+                    <img src="Nueva carpeta/img/Tarjeta3.JPG" class="card-img-top" alt="Figura de Krilin">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta Sorpresa, con jacos, cartas y ruleta</h5>
+                        <p class="card-text">40000 pesos.</p>
+                        <a href="#" class="btn btn-primary add-to-cart">Añadir al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-price="10000" data-title="Tarjeta4">
+                <div class="card">
+                    <img src="Nueva carpeta/img/Tarjeta4.JPG" class="card-img-top" alt="Figura de Krilin">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta Transmilenio</h5>
+                        <p class="card-text">10000 pesos.</p>
+                        <a href="#" class="btn btn-primary add-to-cart">Añadir al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-price="10000" data-title="Tarjeta5">
+                <div class="card">
+                    <img src="Nueva carpeta/img/Tarjeta5.JPG" class="card-img-top" alt="Figura de Krilin">
+                    <div class="card-body">
+                        <h5 class="card-title">Tarjeta MasterCard</h5>
+                        <p class="card-text">10000 pesos.</p>
+                        <a href="#" class="btn btn-primary add-to-cart">Añadir al Carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alerta de mensaje -->
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="alertMessage" style="display: none;">
+        <span id="alertText"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <!-- Resumen del carrito -->
+    <div class="cart-summary">
+        <h4>Carrito de Compras</h4>
+        <div id="cartItems"></div>
+        <div id="cartTotal">Total: 0 pesos</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Nueva carpeta/js/tarjetas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</body>
+</html>
